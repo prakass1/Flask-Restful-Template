@@ -1,0 +1,19 @@
+version: "3.7"
+
+networks:
+  app_net:
+    internal: false
+
+services:
+  quotes-service:
+    platform: linux/amd64
+    image: ${HUBUSER}/quotes-service
+    build:
+      context: .
+      dockerfile: quote-service/Dockerfile
+    networks:
+      - app_net
+    command:
+      python manage.py
+    ports:
+     - 5500:5500
