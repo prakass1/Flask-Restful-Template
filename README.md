@@ -30,5 +30,4 @@ The example service already built is the quotes-service. To build and run the ex
 
 Now, when it is running all fine you can open to see the swagger spec at `http://localhost:5500/api/v1/docs` where index and quotes services are available to be executed.  
 
-### Please consider to ⭐ the repository, and raise PR to add more helpful functionalities. 
  
