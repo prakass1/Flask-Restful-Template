@@ -13,7 +13,7 @@ url = Config.URL
 quotes_api = Namespace("quotes", description="Quotes API")
 
 def fetch_quotes(q_url):
-    html_doc = requests.get(url)
+    html_doc = requests.get(q_url)
     soup = BeautifulSoup(html_doc.text, "html.parser")
     quotes_ele = soup.find_all("div", {"class":"grid-item"})
     responses = []
